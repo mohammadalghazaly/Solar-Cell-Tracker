@@ -24,20 +24,20 @@ void loop() {
     int D=analogRead(dwon)/10;
     int R=analogRead(rith)/10;
     int L=analogRead(left)/10;
-    if(U<D+5){
+    if((U<D+5)&&(Y<180)){
       Y++;
       servoY.write(Y); 
       }
-      if(D<U+5){
+      if((D<U+5)&&(Y>0)){
          Y--;
       servoY.write(Y); 
         }
         
-        if(R<L+5){
+        if((R<L+5)&&(X<180)){
       X++;
       servoX.write(X); 
       }
-      if(L<R+5){
+      if((L<R+5)&&(X>0)){
          X--;
       servoX.write(X); 
         }else{};
